@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Вакансии</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/jquery.jgrowl.min.css">
+    <link rel="stylesheet" href="../assets/css/user.css">
+    
+</head>
+
+<body>
+<!-- хедер -->
+    <section id="advantages">
+      <div class="container">
+        <div class="row pt-4">
+          <p class="advantages-name text-center font-weight-bold tetx-fff1b5 col-12 m-0 py-3">Вакансии</p>
+        </div>
+        <div class="row text-light">
+          <div class="col-12 col-lg-5 my-auto">            
+            <p class="font-size-18px font-weight-normal">Подборка по определенным параметрам: метраж, район, этаж и т.д.<br>Проверка объектов и собственников.<br>Полное сопровождение сделки.</p>
+          </div>
+          <p class="col-12 col-lg-7 d-none d-md-block my-auto">Компания Мillions оказывает сервис высокого уровня и гарантирует полную юридическую чистоту сделок. Компетенция наших сотрудников на столичном рынке недвижимости позволяет избавлять наших клиентов от лишних трат и фальшивых сделок. Интересы наших клиентов всегда защищены в договорах, которые оформляются юристами компании. Полное сопровождение сделки и экспертный контроль на всех этапах позволяет сэкономить деньги и время, а также получить отличный результат. Гарантия качества и отличный сервис – наши приоритеты!</p>
+        </div>
+        <div class="row pb-5">
+
+          <form id="feedbackForm" action="/formcareers/process/process.php" enctype="multipart/form-data"
+                          novalidate>
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <!-- Имя пользователя -->
+                                <div class="form-group has-feedback">                                    
+                                    <input id="name" type="text" name="name" class="form-control"
+                                           value="" placeholder="Имя" minlength="2" required="required">
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <!-- Фамилия пользователя -->
+                                <div class="form-group has-feedback">                                    
+                                    <input id="surname" type="text" name="surname" class="form-control"
+                                           value="" placeholder="Фамилия" minlength="2" required="required">
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <!-- Email пользователя -->
+                                <div class="form-group has-feedback">                                    
+                                    <input id="email" type="email" name="email" required="required"
+                                           class="form-control"
+                                           value="" placeholder="Email-адрес">
+                                    <span class="glyphicon form-control-feedback"></span>
+                                </div>
+
+                            </div>
+                            
+                            <div class="col-sm-6">
+                            
+								<div class="form-group has-feedback">								  
+								  <input type="text" name="phone" class="form-control" value="" maxlength="17" placeholder="Телефон">
+								  <span class="glyphicon form-control-feedback"></span>
+								</div>
+                            
+							</div>
+                        </div>
+
+                        <!-- Сообщение пользователя -->
+                        <div class="form-group has-feedback">                            
+                            <textarea id="message" name="message" class="form-control"
+                                      rows="3" placeholder="Сообщение (необязательное поле)" minlength="20"
+                                      maxlength="500" required="required"></textarea>
+                        </div>
+
+                        <!-- Файлы, для прикрепления к форме -->
+                        <div class="form-group">
+                            <p style="font-weight: 700; margin-bottom: 0;">Прикрепить к сообщению резюме:</p>                            
+                            <div class="attachments">
+                                <input type="file" name="attachment[]">
+                                <p style="margin-top: 3px; margin-bottom: 3px; color: #ff0000;"></p>
+                            </div>
+                        </div>
+
+                        <!-- Капча -->
+                        <div class="col-sm-6">
+                        <div class="captcha">
+                            <img class="img-captcha" src="/feedback/captcha/captcha.php"
+                                 data-src="/feedback/captcha/captcha.php">
+                            <div class="btn btn-default refresh-captcha"><i class="glyphicon glyphicon-refresh"></i>
+                                Обновить
+                            </div>
+                            <div class="form-group has-feedback" style="margin-top: 10px;">                                
+                                <input type="text" name="captcha" maxlength="6" required="required" id="captcha"
+                                       class="form-control captcha" placeholder="Введите код с картинки" autocomplete="off" value="">
+                                <span class="glyphicon form-control-feedback"></span>
+                            </div>
+                        </div>
+			  </div>
+
+                        <!-- Пользовательское солашение -->
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="agree"> Нажимая кнопку, я даю своё согласие на обработку моих
+                                персональных данных.
+                            </label>
+                        </div>
+
+                        <!-- Кнопка для отправки формы -->
+                        <button type="submit" class="btn btn-success pull-right" disabled="disabled">Отправить
+                            сообщение
+                        </button>
+                      </form>
+
+
+        </div>
+      </div>
+    </section>
+      
+      
+<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.jgrowl.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="formcareers/js/main.js"></script>
+
+</body>
+
+</html>
+   
+    
